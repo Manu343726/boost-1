@@ -31,7 +31,7 @@ endif()
 
 function(cmakelists_library CMakeLists LibraryName)
     get_filename_component(directory "${CMakeLists}" DIRECTORY)
-    string(REPLACE "${CMAKE_SOURCE_DIR}/libs/" "" relative_path "${directory}")
+    string(REPLACE "${PROJECT_SOURCE_DIR}/libs/" "" relative_path "${directory}")
     string(REPLACE "/" "_" library_name "${relative_path}")
     set(${LibraryName} "${library_name}" PARENT_SCOPE)
 endfunction()
